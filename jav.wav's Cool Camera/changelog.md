@@ -1,3 +1,6 @@
+## jav.wav's Cool Camera 1.6
+- deleted old camera files
+
 ## jav.wav's Cool Camera 1.5
 - made the camera rfl a code
 
