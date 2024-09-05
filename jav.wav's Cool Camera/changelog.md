@@ -1,3 +1,6 @@
+## jav.wav's Cool Camera 1.3
+- welcome back dynamic fov
+
 ## jav.wav's Cool Camera 1.2
 - dynamic fov begone
 
