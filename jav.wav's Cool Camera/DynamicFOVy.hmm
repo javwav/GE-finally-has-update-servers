@@ -26,7 +26,7 @@ Code "Dynamic FOV" by "Trepe"
 float speedThreshold = 20.0f;
 float maxSpeedForFOV = 90.0f;  // Speed at which FOV reaches its maximum
 float baseFOV = 50.0f;          // Default FOV when not moving fast
-float maxFOV = 70.0f;           // Maximum FOV
+float maxFOV = 75.0f;           // Maximum FOV
 float fovTransitionSpeed = 0.06f; // Speed of FOV transition per frame (lower is slower)
 
 // Get the player's horizontal speed
