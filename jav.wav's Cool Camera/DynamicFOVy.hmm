@@ -2,10 +2,31 @@ Code "Dynamic FOV" by "Trepe"
 //
     #lib "GameObject"
     #lib "Player"
+	#lib "HMM"
+	#lib "INI"
 
+	#import "Services"
     #import "Cameras"
     #import "GOComponents"
+
+	static bool IsConfigInitialised = false;
+	static int DynamicFOVy = 0;
 //
+    if (!IsConfigInitialised)
+    {
+		var mod = HMM.GetModByID("752940F3");
+
+		if (mod == null)
+			return;
+
+		string modConfigIniPath = System.IO.Path.Combine(mod.Path, "mod.ini");
+		var ini = INI.Read(modConfigIniPath);
+
+		DynamicFOVy = INI.Parse<int>(ini["Main"]["DynamicFOVy"], DynamicFOVy);
+        IsConfigInitialised = true;
+    }
+
+if (DynamicFOVy == 1)
 {
     var pPlayer = Player.GetPlayerData();
 
