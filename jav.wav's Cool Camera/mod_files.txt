@@ -1,0 +1,4 @@
+add mod.ini
+add DynamicFOVy.hmm
+add FastCameraGE.hmm
+add FixesBoostCam.hmm
