@@ -1,0 +1,41 @@
+{
+   "Groups": [
+      {
+         "Name": "Main",
+         "DisplayName": "Dynamic FOV",
+         "Elements": [
+      {
+               "Name": "DynamicFOVy",
+               "DisplayName": "Dynamic FOV:",
+               "Description": [
+                  "Min fov 50 Max fov 70."
+               ],
+               "Type": "DynamicFOVy",
+               "MinValue": 0,
+               "MaxValue": 99,
+               "DefaultValue": "1"
+
+      },
+         ]
+      }
+   ],
+   "Enums": {
+		"DynamicFOVy": [
+	 {
+            "DisplayName": "On",
+            "Value": "1",
+            "Description": [
+               ""
+            ]
+         },
+	 {
+            "DisplayName": "Off",
+            "Value": "0",
+            "Description": [
+               ""
+            ]
+         },
+      ],
+   },
+   "IniFile": "mod.ini"
+}
