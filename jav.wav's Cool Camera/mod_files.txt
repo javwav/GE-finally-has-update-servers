@@ -1,2 +1,3 @@
+add coniiiiiffggff.json
 add DynamicFOVy.hmm
 add mod.ini
