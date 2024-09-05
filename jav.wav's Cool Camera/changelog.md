@@ -1,3 +1,6 @@
+## jav.wav's Cool Camera 1.4
+- toggle dynamic fov i hope it works
+
 ## jav.wav's Cool Camera 1.3
 - welcome back dynamic fov
 
