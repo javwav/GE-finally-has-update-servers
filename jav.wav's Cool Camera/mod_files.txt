@@ -1,3 +1,2 @@
 delete raw/misc/resident.pac
-add standard_camera1.hmm
 add mod.ini
