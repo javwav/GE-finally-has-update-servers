@@ -1,2 +1,2 @@
-delete DynamicFOVy.hmm
+add DynamicFOVy.hmm
 add mod.ini
