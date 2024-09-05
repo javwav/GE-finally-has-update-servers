@@ -1,0 +1,44 @@
+Code "GE_MB2d"
+//
+    #lib "GameManager"
+    #lib "NeedleFxSceneData"
+    #lib "HMM"
+    #lib "INI"
+
+    #import "Services"
+
+    using System.Runtime.InteropServices;
+
+    [StructLayout(LayoutKind.Explicit, Size = 0x1610)]
+    public struct FxParamManager
+    {
+        [FieldOffset(0x80)] public NeedleFxSceneData.NeedleFxParameter parameters;
+        [FieldOffset(0x12f0)] public NeedleFxSceneData.NeedleFxSceneConfig sceneConfig;
+    }
+
+    static bool IsConfigInitialised = false;
+    static int MB2d = 0;
+
+//
+    if (!IsConfigInitialised)
+    {
+		var mod = HMM.GetModByID("D5F33650");
+
+		if (mod == null)
+			return;
+
+		string modConfigIniPath = System.IO.Path.Combine(mod.Path, "config.ini");
+		var ini = INI.Read(modConfigIniPath);
+
+		MB2d = INI.Parse<int>(ini["GE"]["MB2d"], MB2d);
+        IsConfigInitialised = true;
+    }
+
+if (MB2d == 1)
+{
+    var fxParamManager = GameManager.GetService<FxParamManager>();
+
+    if (fxParamManager != null) {
+        fxParamManager->parameters.blur.enable = true;
+    }
+}
