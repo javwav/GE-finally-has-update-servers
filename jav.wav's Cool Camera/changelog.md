@@ -1,3 +1,6 @@
+## jav.wav's Cool Camera 1.5
+- made the camera rfl a code
+
 ## jav.wav's Cool Camera 1.4
 - toggle dynamic fov i hope it works
 
