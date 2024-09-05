@@ -1,0 +1,53 @@
+Code "Dynamic FOV" by "Trepe"
+//
+    #lib "GameObject"
+    #lib "Player"
+
+    #import "Cameras"
+    #import "GOComponents"
+//
+{
+    var pPlayer = Player.GetPlayerData();
+
+    if (pPlayer == null)
+        return;
+
+    var pGOCCamera = GameObject.GetGOC<GOCCamera>(&pPlayer->GameObject);
+
+    if (pGOCCamera == null)
+        return;
+
+    var pStandardCamera = pGOCCamera->GetCameraController<StandardCamera>();
+
+    if (pStandardCamera == null)
+        return;
+
+// Define constants
+float speedThreshold = 20.0f;
+float maxSpeedForFOV = 90.0f;  // Speed at which FOV reaches its maximum
+float baseFOV = 50.0f;          // Default FOV when not moving fast
+float maxFOV = 70.0f;           // Maximum FOV
+float fovTransitionSpeed = 0.06f; // Speed of FOV transition per frame (lower is slower)
+
+// Get the player's horizontal speed
+float horzMag = Player.Kinematics.GetHorizontalMagnitude();
+
+// Calculate the target FOV based on speed
+float targetFOV;
+if (horzMag > speedThreshold)
+{
+    // Calculate the interpolation factor
+    float factor = (horzMag - speedThreshold) / (maxSpeedForFOV - speedThreshold);
+    factor = MathHelpers.Clamp(factor, 0.0f, 1.0f);
+    targetFOV = MathHelpers.Lerp(baseFOV, maxFOV, factor);
+}
+else
+{
+    targetFOV = baseFOV;
+}
+
+// Smoothly transition to the target FOV
+float currentFOV = pStandardCamera->pContext->GetFieldOfView();
+float newFOV = MathHelpers.Lerp(currentFOV, targetFOV, fovTransitionSpeed);
+pStandardCamera->pContext->SetFieldOfView(newFOV);
+}
