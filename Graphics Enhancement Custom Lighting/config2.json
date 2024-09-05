@@ -1,0 +1,126 @@
+{
+   "Groups": [
+      {
+         "Name": "Lighting",
+         "DisplayName": "New Open Zone Lighting (No performance hit. Compatible with LUTs)",
+         "Elements": [
+      {
+               "Name": "AtmosKronosLightingConfig",
+               "DisplayName": "Kronos/Rhea Island Lighting:",
+               "Description": [
+                  "THIS IS NOT AN LUT AND IT DOES NOT TAKE PERFORMANCE."
+               ],
+               "Type": "AtmosKronosLightingConfig",
+               "MinValue": 0,
+               "MaxValue": 99,
+               "DefaultValue": "1"
+
+      },
+      {
+               "Name": "AtmosAresLightingConfig",
+               "DisplayName": "Ares Island Lighting:",
+               "Description": [
+                  "THIS IS NOT AN LUT AND IT DOESN'T TAKE PERFORMANCE."
+               ],
+               "Type": "AtmosAresLightingConfig",
+               "MinValue": 0,
+               "MaxValue": 99,
+               "DefaultValue": "1"
+      },
+      {
+               "Name": "AtmosChaosLightingConfig",
+               "DisplayName": "Chaos Island Lighting:",
+               "Description": [
+                  "THIS IS NOT AN LUT AND IT DOES NOT TAKE PERFORMANCE."
+               ],
+               "Type": "AtmosChaosLightingConfig",
+               "MinValue": 0,
+               "MaxValue": 99,
+               "DefaultValue": "1"
+      },
+      {
+               "Name": "AtmosOuranosLightingConfig",
+               "DisplayName": "Ouranos Island Lighting:",
+               "Description": [
+                  "THIS IS NOT AN LUT AND IT DOESN'T TAKE PERFORMANCE."
+               ],
+               "Type": "AtmosOuranosLightingConfig",
+               "MinValue": 0,
+               "MaxValue": 99,
+               "DefaultValue": "1"
+            }
+         ]
+      }
+   ],
+   "Enums": {
+		"AtmosKronosLightingConfig": [
+	 {
+            "DisplayName": "On",
+            "Value": "1",
+            "Description": [
+               ""
+            ]
+         },
+	 {
+            "DisplayName": "Off",
+            "Value": "0",
+            "Description": [
+               ""
+            ]
+         }, 
+		 
+      ],
+		"AtmosAresLightingConfig": [
+	 {
+            "DisplayName": "On",
+            "Value": "1",
+            "Description": [
+               ""
+            ]
+         },
+	 {
+            "DisplayName": "Off",
+            "Value": "0",
+            "Description": [
+               ""
+            ]
+         }, 
+		 
+      ],
+		"AtmosChaosLightingConfig": [
+	 {
+            "DisplayName": "On",
+            "Value": "1",
+            "Description": [
+               ""
+            ]
+         },
+	 {
+            "DisplayName": "Off",
+            "Value": "0",
+            "Description": [
+               ""
+            ]
+         }, 
+		 
+      ],
+		"AtmosOuranosLightingConfig": [
+	 {
+            "DisplayName": "On",
+            "Value": "1",
+            "Description": [
+               ""
+            ]
+         },
+	 {
+            "DisplayName": "Off",
+            "Value": "0",
+            "Description": [
+               ""
+            ]
+         },
+		 
+      ],
+   },
+   "IniFile": "config2.ini"
+}
