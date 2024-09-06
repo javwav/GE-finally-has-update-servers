@@ -567,7 +567,6 @@ if (AtmosChaosLightingConfig == 1)
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.color.X, 0.16f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.color.Y, 0.2f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.color.Z, 0.32f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.anisotropy, 0.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.range, 320.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.isNewMode, true);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.volumeTexture.enableVolumeTexture, false);
@@ -619,7 +618,6 @@ if (AtmosChaosLightingConfig == 1)
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[2].godray.color.X, 0.64f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[2].godray.color.Y, 0.8f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[2].godray.color.Z, 1.3f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[2].godray.anisotropy, 0.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[2].godray.range, 320.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[2].godray.isNewMode, true);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[2].godray.volumeTexture.enableVolumeTexture, false);
