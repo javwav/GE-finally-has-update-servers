@@ -160,9 +160,8 @@ if (GE_GodrayIncrease == 1)
         if (NeedleFxSceneDataInfo.pData == null)
             continue;
 
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.density, 0.5f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[0].godray.density, 1.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[1].godray.density, 1.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[2].godray.density, 2.5f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, weatherItems[3].godray.density, 1.0f);
     }
 }
