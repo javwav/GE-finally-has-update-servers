@@ -27,13 +27,13 @@ Code "GE_AutoExposureKronosRhea"
 
 		var mod1 = HMM.GetModByID("6DB4A0E0");
 
-		if (mod1 == null)
-			return;
-
+		if (mod1 != null)
+	{
 		string mod1ConfigIniPath = System.IO.Path.Combine(mod1.Path, "config2.ini");
 		var ini1 = INI.Read(mod1ConfigIniPath);
 
 		AtmosKronosLightingConfig = INI.Parse<int>(ini1["Lighting"]["AtmosKronosLightingConfig"], AtmosKronosLightingConfig);
+	}
         IsConfigInitialised = true;
     }
 
@@ -193,13 +193,13 @@ Code "GE_AutoExposureAres"
 
 		var mod1 = HMM.GetModByID("6DB4A0E0");
 
-		if (mod1 == null)
-			return;
-
+		if (mod1 != null)
+	{
 		string mod1ConfigIniPath = System.IO.Path.Combine(mod1.Path, "config2.ini");
 		var ini1 = INI.Read(mod1ConfigIniPath);
 
 		AtmosAresLightingConfig = INI.Parse<int>(ini1["Lighting"]["AtmosAresLightingConfig"], AtmosAresLightingConfig);
+	}
         IsConfigInitialised = true;
     }
 
@@ -383,6 +383,7 @@ Code "GE_AutoExposureChaos"
 	static bool IsConfigInitialised = false;
 	static int GE_AutoExposure = 0;
 	static int AtmosChaosLightingConfig = 0;
+
 //
     if (!IsConfigInitialised)
     {
@@ -398,13 +399,14 @@ Code "GE_AutoExposureChaos"
 
 		var mod1 = HMM.GetModByID("6DB4A0E0");
 
-		if (mod1 == null)
-			return;
+		if (mod1 != null)
+	{
 
 		string mod1ConfigIniPath = System.IO.Path.Combine(mod1.Path, "config2.ini");
 		var ini1 = INI.Read(mod1ConfigIniPath);
 
 		AtmosChaosLightingConfig = INI.Parse<int>(ini1["Lighting"]["AtmosChaosLightingConfig"], AtmosChaosLightingConfig);
+	}
         IsConfigInitialised = true;
     }
 
@@ -583,13 +585,13 @@ Code "GE_AutoExposureOuranos"
 
 		var mod1 = HMM.GetModByID("6DB4A0E0");
 
-		if (mod1 == null)
-			return;
-
+		if (mod1 != null)
+	{
 		string mod1ConfigIniPath = System.IO.Path.Combine(mod1.Path, "config2.ini");
 		var ini1 = INI.Read(mod1ConfigIniPath);
 
 		AtmosOuranosLightingConfig = INI.Parse<int>(ini1["Lighting"]["AtmosOuranosLightingConfig"], AtmosOuranosLightingConfig);
+	}
         IsConfigInitialised = true;
     }
 
