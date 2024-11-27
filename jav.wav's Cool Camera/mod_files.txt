@@ -1,2 +1,8 @@
 delete raw/misc/resident.pac
-add mod.ini
+delete FixesBoostCam.hmm
+delete DynamicFOVy.hmm
+delete coniiiiiffggff.json
+delete FOVyReport.hmm
+add FastCameraGE.hmm
+add standard_camera1.hmm
+add mod.inni
