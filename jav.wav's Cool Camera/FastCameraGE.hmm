@@ -1,10 +1,4 @@
-Code "Faster Feeling Camera" in "Camera/Cyber Space" by "Hyper, jav.wav" does 
-/*
-Sets the field of view to match that of the open zone camera and takes the camera closer and lower.
-
-Notes;
-- This is useful when using the "Force Free Camera" codes.
-*/
+Code "Faster Feeling Camera"
 //
     #include "BlackboardStatus" noemit
     #include "Reflection" noemit
@@ -50,7 +44,7 @@ Notes;
 
     float FOVy = pStandardCameraContext->GetFieldOfView()
     float maxFOVy = MathHelpers.ToDegrees(0.96f)
-    float distance = 4.0f + (6.35f - 4.0f) * (maxFOVy - FOVy) / (maxFOVy - 35.0f)
+    float distance = 4.5f + (6.5f - 4.5f) * (maxFOVy - FOVy) / (maxFOVy - 35.0f)
 
     pStandardCameraConfig->option.minFovyRate = 0.61f
 
