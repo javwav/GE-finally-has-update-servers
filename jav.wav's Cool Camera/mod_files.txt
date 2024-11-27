@@ -5,4 +5,4 @@ delete coniiiiiffggff.json
 delete FOVyReport.hmm
 add FastCameraGE.hmm
 add standard_camera1.hmm
-add mod.inni
+add mod.ini
