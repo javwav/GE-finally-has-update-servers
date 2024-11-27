@@ -1,0 +1,44 @@
+Code "Faster Feeling Camera" in "Camera/Cyber Space" by "Hyper, jav.wav" does 
+/*
+Sets the field of view to match that of the open zone camera and takes the camera closer and lower.
+
+Notes;
+- This is useful when using the "Force Free Camera" codes.
+*/
+//
+    #include "BlackboardStatus" noemit
+
+    #lib "Player"
+
+    #import "Cameras"
+    #import "GOComponents"
+//
+{
+
+    var pPlayer = Player.GetPlayerData();
+
+    if (pPlayer == null)
+        return;
+
+    var pGOCCamera = GameObject.GetGOC<GOCCamera>(&pPlayer->GameObject);
+
+    if (pGOCCamera == null)
+        return;
+
+    var pStandardCamera = pGOCCamera->GetCameraController<StandardCamera>();
+
+    if (pStandardCamera == null)
+        return;
+
+    var pStandardCameraContext = pStandardCamera->pContext;
+
+    if (pStandardCameraContext == null)
+        return;
+
+    var pStandardCameraConfig = pStandardCameraContext->pStandardCameraConfig;
+
+    if (pStandardCameraConfig == null)
+        return;
+
+    Console.WriteLine("Fovy updated: " + pStandardCameraContext->GetFieldOfView());
+}

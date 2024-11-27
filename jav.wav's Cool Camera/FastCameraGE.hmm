@@ -7,11 +7,16 @@ Notes;
 */
 //
     #include "BlackboardStatus" noemit
+    #include "Reflection" noemit
 
     #lib "Player"
+    #lib "Reflection"
+    #lib "StandardCameraConfig"
 
     #import "Cameras"
     #import "GOComponents"
+
+    static bool isBattleBool = false;
 //
 {
 
@@ -35,7 +40,32 @@ Notes;
     if (pStandardCameraContext == null)
         return;
 
-    pStandardCameraContext->DistanceSuspension = 1.0f;
     pStandardCameraContext->Elevation = 0.35f;
-    pStandardCameraContext->FieldOfViewY = 0.873f;
+    pStandardCameraContext->FieldOfViewY = 0.96f;
+
+    var pStandardCameraConfig = pStandardCameraContext->pStandardCameraConfig;
+
+    if (pStandardCameraConfig == null)
+        return;
+
+    float FOVy = pStandardCameraContext->GetFieldOfView()
+    float maxFOVy = MathHelpers.ToDegrees(0.96f)
+    float distance = 4.0f + (6.35f - 4.0f) * (maxFOVy - FOVy) / (maxFOVy - 35.0f)
+
+    pStandardCameraConfig->option.minFovyRate = 0.61f
+
+    {
+	var StandardCameraConfigInfo = Reflection.GetDataInfo<StandardCameraConfig.Root>("standard_camera");
+
+	if (StandardCameraConfigInfo.pData == null)
+		return;
+
+	RFL_SET_PARAM(StandardCameraConfigInfo, common.distance, distance);
+
+	    bool isBattle = IS_WORLD_FLAG(IsBattle);
+	    float dynamicBattleFOVy = isBattle ? maxFOVy : 35.0f;
+	    float dBFOVyTransition = 0.06f
+
+	RFL_SET_PARAM(StandardCameraConfigInfo, option.minLimitFovy, MathHelpers.Lerp(FOVy, dynamicBattleFOVy, dBFOVyTransition));
+    }
 }

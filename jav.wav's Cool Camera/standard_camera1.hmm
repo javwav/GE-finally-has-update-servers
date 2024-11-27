@@ -11,26 +11,24 @@ Code "StandardCameraConfig-01462405092024"
 	if (StandardCameraConfigInfo.pData == null)
 		return;
 
-	RFL_SET_PARAM(StandardCameraConfigInfo, common.distance, 4.5f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, common.minElevation, -65.0f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, common.maxElevation, 89.0f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, common.azimuthSensitivity, 2.5f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, common.elevationUpSensitivity, 0.0f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, common.elevationDownSensitivity, 1.0f);
-	RFL_SET_PARAM(StandardCameraConfigInfo, common.targetUpOffset, 0.7f);
+	RFL_SET_PARAM(StandardCameraConfigInfo, common.targetUpOffset, 0.55f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, common.autocontrolDisabledTime, 0.2f);
-	RFL_SET_PARAM(StandardCameraConfigInfo, dash.minDistance, 2.5f);
-	RFL_SET_PARAM(StandardCameraConfigInfo, dash.maxDistance, 6.5f);
+	RFL_SET_PARAM(StandardCameraConfigInfo, dash.minDistance, 3.0f);
+	RFL_SET_PARAM(StandardCameraConfigInfo, dash.maxDistance, 6.65f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, dash.minDistanceAccel, 0.0f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, dash.maxDistanceAccel, 20.0f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, dash.distanceSuspensionK, 35.0f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, dash.azimuthSensitivity, 3.5f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, dash.targetUpOffset, 0.25f);
-	RFL_SET_PARAM(StandardCameraConfigInfo, wall.distance, 8.0f);
-	RFL_SET_PARAM(StandardCameraConfigInfo, battle.distance, 7.0f);
+	RFL_SET_PARAM(StandardCameraConfigInfo, wall.distance, 8.25f);
+	RFL_SET_PARAM(StandardCameraConfigInfo, battle.distance, 6.5f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, battle.targetOffsetSuspensionK, 0.0f);
 	RFL_SET_PARAM(StandardCameraConfigInfo, battle.manualControlTime, 0.0f);
-	RFL_SET_PARAM(StandardCameraConfigInfo, option.minLimitFovy, 45.0f);
 }
 
 Library "StandardCameraConfig"
