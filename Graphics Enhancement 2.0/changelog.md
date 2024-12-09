@@ -5,6 +5,7 @@
 - Decreased reflection artifacts slightly
 - Slightly tweaked shadowmap cascade layout
 - Removed the NeedleFxSceneData library from all the code files and added it in a separate file to decrease file size and hopefully improve stability
+- Attempt number 1 to fix the subsurface scattering code glitch
 
 ## Graphics Enhancement 2.0
 - Big ass update
