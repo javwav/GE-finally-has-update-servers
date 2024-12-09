@@ -1,24 +1,16 @@
 Code "GE_MB2d"
 //
-    #lib "GameManager"
+    #include "Reflection" noemit
+
+    #lib "Reflection"
     #lib "NeedleFxSceneData"
     #lib "HMM"
     #lib "INI"
 
     #import "Services"
 
-    using System.Runtime.InteropServices;
-
-    [StructLayout(LayoutKind.Explicit, Size = 0x1610)]
-    public struct FxParamManager
-    {
-        [FieldOffset(0x80)] public NeedleFxSceneData.NeedleFxParameter parameters;
-        [FieldOffset(0x12f0)] public NeedleFxSceneData.NeedleFxSceneConfig sceneConfig;
-    }
-
     static bool IsConfigInitialised = false;
     static int MB2d = 0;
-
 //
     if (!IsConfigInitialised)
     {
@@ -36,9 +28,6 @@ Code "GE_MB2d"
 
 if (MB2d == 1)
 {
-    var fxParamManager = GameManager.GetService<FxParamManager>();
-
-    if (fxParamManager != null) {
-        fxParamManager->parameters.blur.enable = true;
-    }
+WriteProtected<byte>(0x148427796, 1);
+WriteProtected<byte>(0x14842674B, 1);
 }
