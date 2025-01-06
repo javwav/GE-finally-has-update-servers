@@ -1,0 +1,46 @@
+{
+   "Groups": [
+      {
+         "Name": "main",
+         "DisplayName": "Color Grading",
+         "Elements": [
+ 
+            {
+               "Name": "IncludeDir0",
+               "DisplayName": "Piss Filter?",
+               "Description": [
+                  "Do you want to piss filter?,,",
+               ],
+               "Type": "pee",
+		       "MinValue": null,
+		       "MaxValue": null,
+               "DefaultValue": "YES!!"
+            },
+         ]
+      }
+   ],
+   
+   "Enums": {
+
+      "pee": 
+	  [
+
+         {
+            "DisplayName": "YES!!",
+            "Value": "PISS!!",
+            "Description": [
+               "Pee...",
+            ]
+         },
+
+         {
+            "DisplayName": "No,,",
+            "Value": "no piss,,",
+            "Description": [
+               "It's ok...",
+            ]
+         }, 
+      ],
+	},  
+   "IniFile": "mod.ini"
+}
