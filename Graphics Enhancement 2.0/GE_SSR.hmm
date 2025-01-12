@@ -46,7 +46,7 @@ if (GESSRConfig == 1 && CompatibilityMode == 1)
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.traceThreshold, 1000.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.resolveReproj, 0.4f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.overrideRatio, 1.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.maxRoughness, 0.5f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.maxRoughness, 0.65f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.roughnessLevel, 3.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.uvOffsetScale, 0.3f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.traceSky, true);
@@ -57,7 +57,7 @@ if (GESSRConfig == 1 && CompatibilityMode == 1)
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.traceThreshold, 1000.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.resolveReproj, 0.4f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.overrideRatio, 1.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.maxRoughness, 0.8f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.maxRoughness, 0.65f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.roughnessLevel, 3.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.uvOffsetScale, 0.3f);
     }
@@ -81,7 +81,7 @@ if (GESSRConfig == 1 && CompatibilityMode == 0)
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.traceThreshold, 1000.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.resolveReproj, 0.4f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.overrideRatio, 1.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.maxRoughness, 0.5f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.maxRoughness, 0.65f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.roughnessLevel, 3.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].rlr.uvOffsetScale, 0.3f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.traceSky, true);
@@ -92,7 +92,7 @@ if (GESSRConfig == 1 && CompatibilityMode == 0)
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.traceThreshold, 1000.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.resolveReproj, 0.4f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.overrideRatio, 1.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.maxRoughness, 0.8f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.maxRoughness, 0.65f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.roughnessLevel, 3.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].rlr.uvOffsetScale, 0.3f);
     }

@@ -40,3 +40,17 @@ if (GEFastFSRConfig == 1)
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, config.antialiasing.fsrSharpness, 0.65f);
     }
 }
+
+    string[] stageIds = {"w1f01", "w5r01", "w5t01", "w5t02", "w1r03", "w1r04", "w2r01", "w3r01", "w6d01", "w6d02", "w6d03", "w6d04", "w6d05", "w6d06", "w6d07", "w6d08", "w6d09", "w6d10", "w8d01", "w8d02", "w8d03", "w8d04", "w8d05", "w8d06", "w9d03", "w9d04", "w9d02", "w9d07", "w9d06", "w9d05"};
+
+    foreach (string stageId in stageIds) {
+        var NeedleFxSceneDataInfo = Reflection.GetDataInfo<NeedleFxSceneData.Root>(stageId);
+
+        if (NeedleFxSceneDataInfo.pData == null)
+            continue;
+
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, config.detail.detailDistance, 500f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, config.detail.detailFadeRange, 100f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].terrainBlend.cullingDistance, 10000f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].terrainBlend.cullingDistance, 10000f);
+    }

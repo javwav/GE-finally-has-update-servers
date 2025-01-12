@@ -6,20 +6,20 @@
          "Elements": [
         {
                "Name": "CompatibilityMode",
-               "DisplayName": "Compatibility Mode:",
+               "DisplayName": "Enable changes in Cyberspace:",
                "Description": [
-                  "Disables some stuff from this mod in Cyberspace to prevent custom stages from looking wrong when this is disabled."
+                  "If turned off, disables almost all changes from this mod in Cyberspace to prevent performance drops and prevent some stuff from looking wrong in custom stages. This includes: ambient occlusion, disabled baked global illumination, reflections and motion blur quality. Please check out the dedicated cyberspace options as well since they can affect the look of any custom stage substantially."
                ],
                "Type": "CompatibilityMode",
                "MinValue": 0,
                "MaxValue": 99,
-               "DefaultValue": "0"
+               "DefaultValue": "1"
             },
         {
                "Name": "GE_SSSConfig",
                "DisplayName": "Sub-Surface Scattering Fix:",
                "Description": [
-                  "Fixes the sub-surface scattering glitch where it would leak light in sonic's skin at certain angles. The previous glitch where it wouldn't scale properly to your screen resolution is forcedly fixed no matter if this option is on or off."
+                  "Fixes the sub-surface scattering glitch where it would leak light in sonic's skin at certain angles."
                ],
                "Type": "GE_SSSConfig",
                "MinValue": 0,
@@ -257,14 +257,25 @@
             },
 		{
                "Name": "GE_Lightfield",
-               "DisplayName": "Improved Ambient Lighting:",
+               "DisplayName": "Improved Ambient Lighting in Open Zone:",
                "Description": [
-                  "Brightens ambient lighting so shading flows better. Both options are the same for cyberspace"
+                  "Brightens ambient lighting so shading flows better."
                ],
                "Type": "GE_Lightfield",
                "MinValue": 0,
                "MaxValue": 99,
                "DefaultValue": "2"
+            },
+		{
+               "Name": "GE_LightfieldCyb",
+               "DisplayName": "Improved Ambient Lighting in Cyberspace (READ DESCRIPTION):",
+               "Description": [
+                  "Recolors ambient lighting so shading is more appealing. DISABLE THIS IF YOU ARE GOING TO PLAY ON ANY CUSTOM STAGE OR ANY MOD THAT CHANGES LIGHTING OR TEXTURES."
+               ],
+               "Type": "GE_LightfieldCyb",
+               "MinValue": 0,
+               "MaxValue": 99,
+               "DefaultValue": "1"
             }
          ]
       },
@@ -969,6 +980,23 @@
             ]
          },
 		 
+      ],
+		  "GE_LightfieldCyb": [
+	 {
+            "DisplayName": "Off",
+            "Value": "0",
+            "Description": [
+               ""
+            ]
+         },		 
+	 {
+            "DisplayName": "On",
+            "Value": "1",
+            "Description": [
+               ""
+            ]
+         }, 
+		 	 
       ],
 		  "MB2d": [
 	 {
