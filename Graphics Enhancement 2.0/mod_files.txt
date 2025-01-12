@@ -35,4 +35,5 @@ add Perf_NoBloom.hmm
 add Perf_NoGodray.hmm
 add Perf_TerrainBlend.hmm
 add SSGI.hmm
+add config.json
 add mod.ini
