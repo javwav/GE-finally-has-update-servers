@@ -1,3 +1,10 @@
+## Graphics Enhancement 2.2
+- Fixed and improved "Subsurface Scattering Fix". Now it will also show properly when using resolution scaling and will not require a stage reset after changing the display or the internal resolution.
+- Fixed CyberSpace boost motion blur being too low in 3D.
+- Slightly tweaked reflections.
+- Increased terrain blend draw distance and detail maps draw distance. No performance hit, not a big visual difference either.
+- Fixed an error with the "Enable changes in Cyberspace" description.
+
 ## Graphics Enhancement 2.1
 - "Force 2D Motion Blur" now works in cyberspace as well (thanks to angryzor)
 - Fixed rain enhancements applying when custom atmospheres are enabled (those have their own)
