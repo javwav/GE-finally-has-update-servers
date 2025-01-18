@@ -40,30 +40,34 @@ if (GEAOConfig > 0 && CompatibilityMode == 1)
 
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoBias, 0.8f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoRadius, 0.1f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoFalloff, 0.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoSteps, 6.0f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoFalloff, 0.2f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoSteps,3.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoGitter, 0.001f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoRaycount, 8);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.sssParam.sssRayLength, 0.05f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.sssParam.sssRaycount, 64);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.sssParam.sssBias, 0.005f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.sssParam.sssLimit, 10000.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.occlusionColor.R, 64);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.occlusionColor.G, 39);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.occlusionColor.B, 23);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.occlusionPower, 1.3f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.enableShadow, true);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.shadowPower, 0.4f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoBias, 0.8f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoRadius, 0.1f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoFalloff, 0.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoSteps, 6.0f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoFalloff, 0.2f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoSteps,3.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoGitter, 0.001f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoRaycount, 8);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.sssParam.sssRayLength, 0.05f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.sssParam.sssRaycount, 64);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.sssParam.sssBias, 0.005f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.sssParam.sssLimit, 10000.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.occlusionColor.R, 64);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.occlusionColor.G, 39);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.occlusionColor.B, 23);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.occlusionPower, 1.3f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.enableShadow, true);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.shadowPower, 0.4f);
     }
@@ -78,15 +82,11 @@ if (GEAOConfig == 2 && CompatibilityMode == 1)
 
         if (NeedleFxSceneDataInfo.pData == null)
             continue;
-
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[3].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[3].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[4].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[4].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
+	for (int i = 0; i < 16; i++)
+	{
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[i].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[i].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
+	}
     }
 }
 
@@ -102,30 +102,34 @@ if (GEAOConfig > 0 && CompatibilityMode == 0)
 
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoBias, 0.8f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoRadius, 0.1f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoFalloff, 0.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoSteps, 6.0f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoFalloff, 0.2f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoSteps,3.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoGitter, 0.001f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.hbaoParam.hbaoRaycount, 8);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.sssParam.sssRayLength, 0.05f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.sssParam.sssRaycount, 64);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.sssParam.sssBias, 0.005f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.sssParam.sssLimit, 10000.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.occlusionColor.R, 64);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.occlusionColor.G, 39);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.occlusionColor.B, 23);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.occlusionPower, 1.3f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.enableShadow, true);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].occlusionCapsule.shadowPower, 0.4f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoBias, 0.8f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoRadius, 0.1f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoFalloff, 0.0f);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoSteps, 6.0f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoFalloff, 0.2f);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoSteps,3.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoGitter, 0.001f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.hbaoParam.hbaoRaycount, 8);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.sssParam.sssRayLength, 0.05f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.sssParam.sssRaycount, 64);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.sssParam.sssBias, 0.005f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.sssParam.sssLimit, 10000.0f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.occlusionColor.R, 64);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.occlusionColor.G, 39);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.occlusionColor.B, 23);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.occlusionPower, 1.3f);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.enableShadow, true);
 	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].occlusionCapsule.shadowPower, 0.4f);
     }
@@ -140,14 +144,10 @@ if (GEAOConfig == 2 && CompatibilityMode == 0)
 
         if (NeedleFxSceneDataInfo.pData == null)
             continue;
-
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[0].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[3].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[3].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[4].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[4].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
-	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[7].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
+	for (int i = 0; i < 16; i++)
+	{
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[i].ssao.renderTargetSize, NeedleFxSceneData.FxSSAOParameter_RenderTargetSize.RTSIZE_SAME_AS_FRAMEBUFFER);
+	RFL_SET_PARAM(NeedleFxSceneDataInfo, items[i].ssao.blurStep, NeedleFxSceneData.BLURType.Gauss8x8);
+	}
     }
 }
