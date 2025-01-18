@@ -1,3 +1,6 @@
+## Graphics Enhancement 2.21
+- Tweaked Ambient Occlusion enhancements and refactored Ambient Occlusion resolution code.
+
 ## Graphics Enhancement 2.2
 - Fixed and improved "Subsurface Scattering Fix". Now it will also show properly when using resolution scaling and will not require a stage reset after changing the display or the internal resolution.
 - Fixed CyberSpace boost motion blur being too low in 3D.
