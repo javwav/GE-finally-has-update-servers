@@ -2,22 +2,40 @@
    "Groups": [
       {
          "Name": "main",
-         "DisplayName": "Color Grading",
+         "DisplayName": "General Settings",
          "Elements": [
  
             {
                "Name": "IncludeDir0",
-               "DisplayName": "Piss Filter?",
+               "DisplayName": "White Space",
                "Description": [
-                  "Do you want to piss filter?,,",
+                  "Choose the visual style for White Space.",
                ],
                "Type": "pee",
 		       "MinValue": null,
 		       "MaxValue": null,
-               "DefaultValue": "YES!!"
+               "DefaultValue": "PISS!!"
             },
          ]
-      }
+      },
+      {
+         "Name": "main",
+         "DisplayName": "Color Correction",
+         "Elements": [
+ 
+            {
+               "Name": "IncludeDir2",
+               "DisplayName": "Enable custom color correction LUTs",
+               "Description": [
+                  "Choose whether to use LUTs made for this mod, or use a 'neutral lut' in its place. Some lighting options will be unaffected by this setting.",
+               ],
+               "Type": "lut",
+		       "MinValue": null,
+		       "MaxValue": null,
+               "DefaultValue": "lut"
+            },
+         ]
+      },
    ],
    
    "Enums": {
@@ -26,18 +44,46 @@
 	  [
 
          {
-            "DisplayName": "YES!!",
-            "Value": "PISS!!",
+            "DisplayName": "No Filter",
+            "Value": "no piss,,",
             "Description": [
-               "Pee...",
+               "Changes in exposure, tone mapping and other lighting effects.",
             ]
          },
 
          {
-            "DisplayName": "No,,",
-            "Value": "no piss,,",
+            "DisplayName": "Piss Filter",
+            "Value": "PISS!!",
             "Description": [
-               "It's ok...",
+               "Adds a piss filter.",
+            ]
+         },
+
+         {
+            "DisplayName": "Blue Space (Experimental)",
+            "Value": "karasuno",
+            "Description": [
+               "Changes White Space's lighting and skybox, using a procedural atmosphere, to look close to Yui Karasuno's artwork of Shadow's White Space. Eclipse White Space will look the same as Blue Space.
+			   WARNING: Performance drop. Will only show up after defeating the Biolizard. Will look blown up in some cutscenes.",
+            ]
+         }, 
+      ],
+      "lut": 
+	  [
+
+         {
+            "DisplayName": "On",
+            "Value": "lut",
+            "Description": [
+               "",
+            ]
+         },
+
+         {
+            "DisplayName": "Off",
+            "Value": "lutn't",
+            "Description": [
+               "",
             ]
          }, 
       ],
