@@ -1,1 +1,19 @@
+add everything else/raw/stage/w01a11/w01a11_misc.pac
+add everything else/raw/stage/w01a20/w01a20_misc.pac
+add everything else/raw/stage/w02a10/w02a10_misc.pac
+add everything else/raw/stage/w02a20/w02a20_misc.pac
+add lut/raw/stage/w01a11/w01a11_obj.pac
+add lut/raw/stage/w01a20/w01a20_obj.pac
+add lut/raw/stage/w02a10/w02a10_obj.pac
+add lut/raw/stage/w02a20/w02a20_obj.pac
+add lutn't/raw/stage/w01a11/w01a11_obj.pac
+add lutn't/raw/stage/w01a20/w01a20_obj.pac
+add lutn't/raw/stage/w02a10/w02a10_obj.pac
+add lutn't/raw/stage/w02a20/w02a20_obj.pac
+add karasuno/raw/stage/w09a10/w09a10_misc.pac
+add karasuno/raw/stage/w09a10/w09a10_eclipse.pac
+add karasuno/raw/stage/w09a10/w09a10_obj.pac
+add PISS!!/raw/stage/w09a10/w09a10_misc.pac
+add no piss,,/raw/stage/w09a10/w09a10_misc.pac
+add piss filter.json
 add mod.ini
