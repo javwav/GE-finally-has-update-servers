@@ -1,3 +1,9 @@
+### NeedleFx Edits 1.1.2
+- Updated Rail Canyon tone mapping
+- Added an FxCol shape at the beginning of Rail Canyon Act 2 to increase exposure
+- Tweaked tone mapping and decreased bloom intensity in outer space of Space Colony ARK Act 1
+- Updated Blue Space's tone mapping, replaced fog with light scattering and slightly edited lighting
+
 ## NeedleFx Edits 1.1
 - Updated bloom for White Space and remade some elements of Space Colony ARK.
 - Brand new White Space lighting, inspired on Yui Karasuno's artwork.
