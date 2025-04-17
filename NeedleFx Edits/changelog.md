@@ -1,4 +1,5 @@
 ## NeedleFx Edits 1.1.2
+#### Update 1.1.2.1: Removed the extra FxCol shape
 - Updated Rail Canyon tone mapping
 - Added an FxCol shape at the beginning of Rail Canyon Act 2 to increase exposure
 - Tweaked tone mapping and decreased bloom intensity in outer space of Space Colony ARK Act 1
